@@ -8,10 +8,9 @@ const FooterSection: React.FC = () => {
   const quickLinks = [
     { href: "/", label: "Home" },
     { href: "/projects", label: "Projects" },
-    { href: "/services", label: "Services" },
+    { href: "/solutions", label: "Solutions" },
     { href: "/about", label: "About Us" },
-    { href: "/blog", label: "Blog" },
-    { href: "/contact", label: "Contact" },
+    { href: "/careers", label: "Careers" },
   ];
 
   const contactInfo = [
