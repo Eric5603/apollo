@@ -29,14 +29,14 @@ const Testimonial: React.FC = () => {
       quote: "From groundbreaking to ribbon-cutting, the team maintained perfect communication. Our hospital project came in 15% under budget.",
       name: "Jonathan Mwangi",
       role: "Director, HealthCorp International",
-      image: "images/testimonials/jonathan",
+      image: "images/testimonials/jonathan.jpg",
       projectImage: "/images/testimonials/sarah-williamson.jpg"
     },
     {
       quote: "The only contractors we trust with high-rise projects. Their safety record is impeccable and quality unmatched.",
       name: "Sarah Akinyi",
       role: "VP Construction, Skyline Properties",
-      image: "images/testimonials/sarah",
+      image: "images/testimonials/sarah.jpg",
       projectImage: "/images/testimonials/james-oconnor.jpg"
     },
   ];
