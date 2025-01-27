@@ -15,7 +15,7 @@ const AboutSection = (): ReactElement => {
     {
       title: "Building Tomorrow's Landmarks",
       content: "Pioneering construction excellence since 2003, we combine cutting-edge technology with timeless craftsmanship to create structures that define skylines.",
-      image: "https://images.pexels.com/photos/443378/pexels-photo-443378.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      image: "/images/about/hero.jpg",
       stats: [
         { value: '20+', label: 'Years Experience' },
         { value: '500+', label: 'Projects Completed' },
@@ -25,14 +25,14 @@ const AboutSection = (): ReactElement => {
     {
       title: "Our Mission",
       content: "To revolutionize urban development through sustainable innovation while maintaining the highest standards of safety and quality. We're committed to building communities, not just structures.",
-      image: "https://images.pexels.com/photos/3862135/pexels-photo-3862135.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      image: "/images/about/our-mission.jpg",
       reverse: true
       
     },
     {
       title: "Engineering Legacy",
       content: "From visionary concepts to meticulous execution, our journey reflects our dedication to transforming architectural dreams into enduring realities.",
-      image: "https://images.pexels.com/photos/1022189/pexels-photo-1022189.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "/images/about/engineering-legacy.jpg",
       stats: [
         { value: '2003', label: 'Founded in Chicago' },
         { value: '1M+', label: 'Square Feet Built' },

@@ -38,7 +38,7 @@ const CtaSection: React.FC = () => {
             {/* CTA Buttons */}
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                href="/contact"
+                href="/get-a-quote"
                 className="group relative flex items-center gap-2 bg-blue-600 hover:bg-blue-700 rounded-xl text-lg font-semibold text-white py-4 px-8 transition-all duration-300 hover:-translate-y-0.5 shadow-md hover:shadow-lg"
               >
                 Start Your Project

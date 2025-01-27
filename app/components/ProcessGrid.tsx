@@ -79,7 +79,7 @@ const ProcessHero: FC = () => {
           {/* Right Image */}
           <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-xl">
             <Image
-              src="https://images.unsplash.com/photo-1600585154526-990dced4db0d" 
+              src="/images/process/construction-process.jpg" 
               alt="Construction process" 
               className="w-full h-full object-cover"
             />

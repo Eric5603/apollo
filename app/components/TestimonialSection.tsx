@@ -22,22 +22,22 @@ const Testimonial: React.FC = () => {
       quote: "Their attention to detail transformed our commercial complex into a landmark. Every deadline was met with military precision.",
       name: "Michael Chen",
       role: "CEO, Urban Developments LLC",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
-      projectImage: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      image: "image/testimonials/michael-chen.jpg",
+      projectImage: "/images/testimonials/michael-chen.jpg"
     },
     {
       quote: "From groundbreaking to ribbon-cutting, the team maintained perfect communication. Our hospital project came in 15% under budget.",
       name: "Sarah Williamson",
       role: "Director, HealthCorp International",
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
-      projectImage: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      image: "image/testimonials/sarah-williamson.jpg",
+      projectImage: "/images/testimonials/sarah-williamson.jpg"
     },
     {
       quote: "The only contractors we trust with high-rise projects. Their safety record is impeccable and quality unmatched.",
       name: "James O'Connor",
       role: "VP Construction, Skyline Properties",
-      image: "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
-      projectImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      image: "image/testimonials/james-oconnor.jpg",
+      projectImage: "/images/testimonials/james-oconnor.jpg"
     },
   ];
 

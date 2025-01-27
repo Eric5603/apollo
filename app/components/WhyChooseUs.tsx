@@ -63,7 +63,7 @@ const WhyChooseUsHero: FC = () => {
           {/* Right Image */}
           <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-xl">
             <Image 
-              src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6" 
+              src="/image/construction.jpg" 
               alt="Construction team" 
               className="w-full h-full object-cover"
             />

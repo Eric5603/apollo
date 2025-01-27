@@ -34,7 +34,7 @@ const FooterSection: React.FC = () => {
           <div className="md:col-span-4 lg:col-span-4">
             <div className="flex flex-col space-y-6">
               <h2 className="text-3xl font-bold text-gray-900 tracking-tight">
-                Build<span className="text-indigo-600">Master</span>
+                Articulate<span className="text-indigo-600">Construction</span>
               </h2>
               <p className="text-gray-500 text-base leading-relaxed">
                 Pioneering construction excellence since 2012. 
