@@ -1,12 +1,8 @@
 "use client";
 
 import { useState } from 'react';
-
-interface FAQItem {
-  id: string;
-  question: string;
-  answer: string;
-}
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const FaqSection: React.FC = () => {
   const [openId, setOpenId] = useState<string | null>(null);
@@ -40,8 +36,51 @@ const FaqSection: React.FC = () => {
   ];
 
   return (
-    <section className="bg-white py-20 lg:py-28">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="bg-white">
+      {/* New Hero Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="lg:pr-12"
+          >
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              Clear Answers to
+              <span className="text-blue-600 block mt-2">Construction Questions</span>
+            </h1>
+            <p className="text-lg text-gray-600 mb-8 max-w-xl">
+              Get expert insights into our construction processes, safety protocols, 
+              and project management strategies.
+            </p>
+            <div className="flex items-center gap-4">
+              <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span className="text-gray-600 font-medium">Explore common queries below</span>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="relative"
+          >
+            <div className="relative rounded-xl overflow-hidden bg-blue-50 p-8">
+              <Image
+                src="/images/construction-faq-illustration.svg"
+                alt="Construction FAQ illustration"
+                width={600}
+                height={400}
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Original FAQ Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Building Solutions
