@@ -44,7 +44,7 @@ const Testimonial: React.FC = () => {
   const stats: StatItem[] = [
     { 
       title: "Projects Completed", 
-      value: "850+", 
+      value: "1,250+", 
       description: "Across 12 countries",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -64,7 +64,7 @@ const Testimonial: React.FC = () => {
     },
     { 
       title: "Industry Experience", 
-      value: "25+", 
+      value: "5+", 
       description: "Years of excellence",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">

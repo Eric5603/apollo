@@ -48,7 +48,7 @@ export default function Hero() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <motion.a
-                href="#"
+                href="/request-quote"
                 whileHover={{ scale: 1.05 }}
                 className="px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold flex items-center gap-2 shadow-lg hover:bg-blue-700 transition-colors"
               >
@@ -59,7 +59,7 @@ export default function Hero() {
               </motion.a>
               
               <motion.a
-                href="#"
+                href="/projects"
                 whileHover={{ scale: 1.05 }}
                 className="px-8 py-4 border border-gray-300 text-gray-700 rounded-lg font-semibold hover:border-blue-400 transition-colors"
               >
@@ -70,7 +70,7 @@ export default function Hero() {
             {/* Stats */}
             <div className="mt-12 flex gap-12">
               <div className="border-l-2 border-blue-400 pl-4">
-                <div className="text-3xl font-bold text-gray-900">25+</div>
+                <div className="text-3xl font-bold text-gray-900">5+</div>
                 <div className="text-gray-600 text-sm">Years Experience</div>
               </div>
               <div className="border-l-2 border-blue-400 pl-4">
