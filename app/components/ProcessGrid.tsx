@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { FC } from 'react';
 
 const ProcessHero: FC = () => {
@@ -77,7 +78,7 @@ const ProcessHero: FC = () => {
 
           {/* Right Image */}
           <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-xl">
-            <img 
+            <Image
               src="https://images.unsplash.com/photo-1600585154526-990dced4db0d" 
               alt="Construction process" 
               className="w-full h-full object-cover"

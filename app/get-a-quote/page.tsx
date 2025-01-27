@@ -59,7 +59,7 @@ export default function GetAQuote() {
             <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
               Get in Touch
             </h1>
-            <p className="mt-2 text-gray-600">Let's build something remarkable together</p>
+            <p className="mt-2 text-gray-600">Let&apos;s build something remarkable together</p>
           </div>
 
           {/* Name Field */}

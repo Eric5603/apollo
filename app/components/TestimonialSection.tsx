@@ -1,5 +1,6 @@
 import React from 'react';
-
+import Image from 'next/image';
+  
 interface TestimonialItem {
   quote: string;
   name: string;
@@ -82,7 +83,7 @@ const Testimonial: React.FC = () => {
             Building Trust Through Excellence
           </h2>
           <p className="text-lg text-gray-600">
-            Join thousands of satisfied clients who've transformed their visions into enduring structures
+            Join thousands of satisfied clients who&apos;ve transformed their visions into enduring structures
           </p>
         </div>
 
@@ -94,24 +95,28 @@ const Testimonial: React.FC = () => {
               className="group relative bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
             >
               <div className="relative h-48">
-                <img
+                <Image
                   className="w-full h-full object-cover"
                   src={testimonial.projectImage}
                   alt="Construction project"
+                  width={800}
+                  height={600}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40" />
               </div>
               
               <div className="p-6">
                 <blockquote className="text-lg text-gray-600 mb-6">
-                  "{testimonial.quote}"
+                  &ldquo;{testimonial.quote}&rdquo;
                 </blockquote>
                 
                 <div className="flex items-center gap-4">
-                  <img
+                  <Image
                     className="h-12 w-12 rounded-full border-2 border-white shadow-sm"
                     src={testimonial.image}
                     alt={`Avatar of ${testimonial.name}`}
+                    width={48}
+                    height={48}
                   />
                   <div>
                     <p className="font-semibold text-gray-900">{testimonial.name}</p>

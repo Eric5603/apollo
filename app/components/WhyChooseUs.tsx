@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import Image from 'next/image';
 
 const WhyChooseUsHero: FC = () => {
   const values = [
@@ -61,7 +62,7 @@ const WhyChooseUsHero: FC = () => {
 
           {/* Right Image */}
           <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-xl">
-            <img 
+            <Image 
               src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6" 
               alt="Construction team" 
               className="w-full h-full object-cover"
@@ -69,7 +70,7 @@ const WhyChooseUsHero: FC = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-blue-600/20 to-blue-800/20" />
             <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/60">
               <blockquote className="text-white text-lg italic">
-                "True craftsmanship lies in the perfect balance of safety, quality, and precision timing"
+                &ldquo;True craftsmanship lies in the perfect balance of safety, quality, and precision timing&rdquo;
               </blockquote>
             </div>
           </div>
