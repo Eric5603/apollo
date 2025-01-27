@@ -54,16 +54,6 @@ const CtaSection: React.FC = () => {
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </Link>
-              
-              <Link
-                href="/projects"
-                className="text-gray-600 hover:text-blue-600 font-medium flex items-center gap-2 transition-colors duration-200 px-6 py-3 rounded-lg hover:bg-gray-50"
-              >
-                Explore Our Portfolio
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
-              </Link>
             </div>
           </div>
 

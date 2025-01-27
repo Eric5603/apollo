@@ -105,7 +105,7 @@ const FooterSection: React.FC = () => {
         <div className="mt-16 pt-8 border-t border-gray-100">
           <div className="flex flex-col items-center space-y-2">
             <p className="text-sm text-gray-500 text-center">
-              &copy; {currentYear} BuildMaster. All rights reserved.
+              &copy; {currentYear} Articulate Construction. All rights reserved.
             </p>
             <p className="text-xs text-gray-400">
               Licensed and Insured • ROC #123456
