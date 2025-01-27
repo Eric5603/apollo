@@ -7,7 +7,7 @@ import Image from 'next/image';
 const FaqSection: React.FC = () => {
   const [openId, setOpenId] = useState<string | null>(null);
 
-  const faqData: FAQItem[] = [
+  const faqData =  [
     {
       id: 'faq1',
       question: "What's included in your construction project timeline?",
