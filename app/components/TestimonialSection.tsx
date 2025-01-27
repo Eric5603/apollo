@@ -22,7 +22,7 @@ const Testimonial: React.FC = () => {
       quote: "Their attention to detail transformed our commercial complex into a landmark. Every deadline was met with military precision.",
       name: "Stephen Kariuki",
       role: "CEO, Urban Developments LLC",
-      image: "image/testimonials/Stephen.jpg",
+      image: "images/testimonials/Stephen.jpg",
       projectImage: "/images/testimonials/michael-chen.jpg"
     },
     {
