@@ -12,7 +12,7 @@ interface ServiceCardProps {
 const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon }) => {
   return (
     <div className="group bg-white p-8 rounded-2xl border border-gray-100 hover:border-transparent hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-white opacity-0 group-hover:opacity-900 transition-opacity duration-300" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       <div className="bg-gradient-to-br from-blue-600 to-blue-400 w-fit p-3 rounded-xl mb-6 mx-auto shadow-lg">
         {icon}
       </div>
@@ -66,8 +66,41 @@ const HeroSection: React.FC = () => {
     },
   ];
 
+  const CtaButton: React.FC<{
+    href: string;
+    label: string;
+    variant: "primary" | "secondary";
+    icon: "arrow-right" | "portfolio";
+  }> = ({ href, label, variant, icon }) => {
+    const iconPaths = {
+      "arrow-right": "M17 8l4 4m0 0l-4 4m4-4H3",
+      "portfolio": "M19 14l-7 7m0 0l-7-7m7 7V3",
+    };
+
+    return (
+      <a
+        href={href}
+        className={`
+          px-8 py-4 rounded-xl font-semibold transition-all transform
+          text-center flex items-center justify-center
+          ${
+            variant === "primary"
+              ? "bg-gradient-to-r from-blue-600 to-blue-500 text-white shadow-lg shadow-blue-100 hover:from-blue-700 hover:to-blue-600 hover:scale-[1.02]"
+              : "border-2 border-gray-200 text-gray-700 hover:border-blue-200 hover:bg-blue-50 hover:scale-[1.01]"
+          }
+        `}
+        aria-label={label}
+      >
+        {label}
+        <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={iconPaths[icon]} />
+        </svg>
+      </a>
+    );
+  };
+
   return (
-    <section className="bg-white py-20 lg:py-28">
+    <section className="relative bg-white py-20 lg:py-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Text Content */}
@@ -91,28 +124,18 @@ const HeroSection: React.FC = () => {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <a
+              <CtaButton
                 href="/get-a-quote"
-                className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold 
-                         hover:from-blue-700 hover:to-blue-600 transition-all shadow-lg shadow-blue-100
-                         transform hover:scale-[1.02] text-center flex items-center justify-center"
-              >
-                Start Your Project
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-              <a
+                label="Start Your Project"
+                variant="primary"
+                icon="arrow-right"
+              />
+              <CtaButton
                 href="/projects"
-                className="border-2 border-gray-200 text-gray-700 px-8 py-4 rounded-xl font-semibold 
-                         hover:border-blue-200 hover:bg-blue-50 transition-all transform hover:scale-[1.01]
-                         text-center flex items-center justify-center"
-              >
-                Explore Portfolio
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
-              </a>
+                label="Explore Portfolio"
+                variant="secondary"
+                icon="portfolio"
+              />
             </div>
           </div>
 
