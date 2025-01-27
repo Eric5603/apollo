@@ -20,9 +20,9 @@ const Testimonial: React.FC = () => {
   const testimonials: TestimonialItem[] = [
     {
       quote: "Their attention to detail transformed our commercial complex into a landmark. Every deadline was met with military precision.",
-      name: "Michael Chen",
+      name: "Stephen Kariuki",
       role: "CEO, Urban Developments LLC",
-      image: "image/testimonials/michael-chen.jpg",
+      image: "image/testimonials/Stephen.jpg",
       projectImage: "/images/testimonials/michael-chen.jpg"
     },
     {
