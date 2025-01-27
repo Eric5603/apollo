@@ -41,6 +41,39 @@ const Testimonial: React.FC = () => {
     },
   ];
 
+  const stats: StatItem[] = [
+    { 
+      title: "Projects Completed", 
+      value: "850+", 
+      description: "Across 12 countries",
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+        </svg>
+      )
+    },
+    { 
+      title: "Safety Milestone", 
+      value: "50K+", 
+      description: "Incident-free hours",
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+      )
+    },
+    { 
+      title: "Industry Experience", 
+      value: "25+", 
+      description: "Years of excellence",
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+      )
+    },
+  ];
+
   return (
     <div className="bg-white">
       <div className="max-w-7xl mx-auto px-4 py-20 sm:px-6 lg:px-8">
@@ -94,7 +127,26 @@ const Testimonial: React.FC = () => {
             </div>
           ))}
         </div>
-        
+
+        {/* Stats Section */}
+        <div className="grid gap-8 md:grid-cols-3 bg-slate-50 rounded-2xl p-8">
+          {stats.map((stat, index) => (
+            <div 
+              key={index}
+              className="flex items-start gap-6 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
+            >
+              <div className="flex-shrink-0 p-3 bg-blue-100 rounded-lg text-blue-600">
+                {stat.icon}
+              </div>
+              <div>
+                <p className="text-2xl font-bold text-gray-900 mb-1">{stat.value}</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">{stat.title}</h3>
+                <p className="text-sm text-gray-600">{stat.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
         {/* Decorative Element */}
         <div className="mt-20 relative">
           <div className="absolute inset-x-0 top-1/2 w-full h-1 bg-gradient-to-r from-blue-600/20 via-slate-300/20 to-orange-500/20" aria-hidden="true" />
