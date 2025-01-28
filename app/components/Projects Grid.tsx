@@ -79,27 +79,27 @@ const ProjectsGrid = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Projects Grid */}
-      <section className="py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="mx-auto flex flex-col items-center gap-4 text-center mb-14">
             <span className="text-blue-600 font-semibold uppercase tracking-wider text-sm">
               OUR PORTFOLIO
             </span>
-            <h2 className="text-4xl font-bold text-gray-900">
+            <h2 className="text-3xl font-bold text-gray-900">
               Building <span className="text-blue-600">Landmark</span> Projects
             </h2>
-            <p className="text-base text-gray-600 max-w-3xl mt-4">
+            <p className="text-base text-gray-600 max-w-3xl mt-2">
               Discover our legacy of engineering excellence through transformative construction achievements
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project, index) => (
               <div 
                 key={index}
-                className="group relative flex flex-col rounded-2xl bg-white shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border-2 border-gray-200"
+                className="group relative flex flex-col rounded-lg bg-white shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border-2 border-gray-200"
               >
-                <div className="relative h-64 overflow-hidden rounded-t-2xl">
+                <div className="relative h-56 overflow-hidden rounded-t-lg">
                   <Image
                     src={project.image}
                     alt={project.alt}
@@ -114,12 +114,12 @@ const ProjectsGrid = () => {
                   </div>
                 </div>
                 
-                <div className="p-6">
-                  <div className="mb-4">
+                <div className="p-4">
+                  <div className="mb-3">
                     <h3 className="text-lg font-bold text-gray-900">
                       {project.title}
                     </h3>
-                    <div className="flex items-center mt-2 text-gray-600">
+                    <div className="flex items-center mt-1 text-gray-600">
                       <svg 
                         className="w-4 h-4 mr-1.5 flex-shrink-0"
                         viewBox="0 0 24 24"
@@ -134,7 +134,7 @@ const ProjectsGrid = () => {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4 text-sm border-t border-gray-100 pt-4">
+                  <div className="grid grid-cols-2 gap-3 text-sm border-t border-gray-100 pt-3">
                     <div className="space-y-1">
                       <p className="text-xs font-medium text-gray-500 uppercase">Size</p>
                       <p className="font-medium text-gray-900">{project.size}</p>
@@ -145,8 +145,8 @@ const ProjectsGrid = () => {
                     </div>
                   </div>
 
-                  <div className="mt-4 flex items-center justify-between">
-                    <div className="flex items-center gap-1.5">
+                  <div className="mt-3 flex items-center justify-between">
+                    <div className="flex items-center gap-1">
                       {[1, 2, 3, 4, 5].map((star) => (
                         <svg
                           key={star}
@@ -169,7 +169,7 @@ const ProjectsGrid = () => {
 
           {/* CTA Section */}
           <div className="mt-14 text-center">
-            <button className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-xl text-white bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 transition-all shadow-sm">
+            <button className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 transition-all shadow-sm">
               View Full Portfolio
               <svg 
                 className="ml-2 -mr-1 w-4 h-4" 

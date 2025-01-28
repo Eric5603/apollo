@@ -88,27 +88,27 @@ const ServicesGrid = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Services Grid */}
-      <section className="py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto flex flex-col items-center gap-4 text-center mb-16">
+      <section className="py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
+          <div className="mx-auto flex flex-col items-center gap-4 text-center mb-14">
             <span className="inline-block text-blue-600 font-semibold uppercase tracking-wider text-sm">
               Professional Services
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Building Tomorrow&apos;s Infrastructure
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl">
+            <p className="text-base text-gray-600 max-w-3xl">
               Comprehensive construction solutions powered by innovation and decades of expertise
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
               <div 
                 key={index}
-                className="group relative flex flex-col rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
+                className="group relative flex flex-col rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 border-gray-200"
               >
-                <div className="relative h-56 overflow-hidden rounded-t-2xl">
+                <div className="relative h-56 overflow-hidden rounded-t-xl">
                   <Image 
                     src={service.image}
                     alt={service.alt}
@@ -120,19 +120,19 @@ const ServicesGrid = () => {
                 </div>
                 
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">
                     {service.title}
                   </h3>
                   <p className="text-gray-600 mb-4">
                     {service.description}
                   </p>
                   
-                  <div className="space-y-2.5">
+                  <div className="space-y-2">
                     {service.features.map((feature, fIndex) => (
                       <div key={fIndex} className="flex items-start">
                         <div className="flex-shrink-0 mt-1 mr-3">
                           <svg 
-                            className="w-5 h-5 text-blue-600" 
+                            className="w-4 h-4 text-blue-600" 
                             viewBox="0 0 24 24" 
                             fill="none" 
                             stroke="currentColor" 
@@ -151,11 +151,11 @@ const ServicesGrid = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="mt-16 text-center">
-            <button className="inline-flex items-center justify-center px-8 py-3.5 border border-transparent text-base font-medium rounded-xl text-white bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 transition-all shadow-sm">
+          <div className="mt-14 text-center">
+            <button className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 transition-all shadow-sm">
               Explore All Capabilities
               <svg 
-                className="ml-2 -mr-1 w-5 h-5" 
+                className="ml-2 -mr-1 w-4 h-4" 
                 fill="currentColor" 
                 viewBox="0 0 20 20"
               >
