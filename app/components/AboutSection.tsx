@@ -4,31 +4,6 @@ import { ReactElement } from 'react';
 const AboutPage = (): ReactElement => {
   return (
     <div className="min-h-screen bg-slate-50">
-      {/* Hero Section */}
-      <section className="relative py-16 border-b-2 border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-14">
-            <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-              Building Excellence Since 2003
-            </h1>
-            <p className="text-base text-slate-600 max-w-3xl mx-auto">
-              Pioneering innovative construction solutions while maintaining timeless craftsmanship
-            </p>
-          </div>
-          
-          <div className="aspect-video bg-slate-200 rounded-lg overflow-hidden border-2 border-slate-200 shadow-md">
-            <video 
-              autoPlay 
-              muted 
-              loop 
-              className="w-full h-full object-cover"
-            >
-              <source src="/construction-site.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </div>
-      </section>
-
       {/* Core Values */}
       <section className="py-16 bg-white border-b-2 border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
