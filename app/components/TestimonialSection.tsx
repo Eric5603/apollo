@@ -2,153 +2,79 @@ import React from 'react';
 import Image from 'next/image';
 
 interface TestimonialItem {
-  quote: string;
-  name: string;
-  role: string;
-  image: string;
-  projectImage: string;
-}
-
-interface StatItem {
   title: string;
-  value: string;
-  description: string;
-  icon: React.ReactNode;
+  author: string;
+  postDate: string;
+  memberSince: string;
+  content: string;
+  ps?: string;
+  likes: number;
+  comments: number;
+  profileImage: string;
 }
 
-const TestimonialSection: React.FC = () => {
-  const testimonials: TestimonialItem[] = [
-    {
-      quote: "Their attention to detail transformed our commercial complex into a landmark. Every deadline was met with military precision.",
-      name: "Stephen Kariuki",
-      role: "CEO, Urban Developments LLC",
-      image: "/images/testimonials/stephen.jpg",
-      projectImage: "/images/testimonials/michael-chen.jpg"
-    },
-    {
-      quote: "From groundbreaking to ribbon-cutting, the team maintained perfect communication. Our hospital project came in 15% under budget.",
-      name: "Jonathan Mwangi",
-      role: "Director, HealthCorp International",
-      image: "/images/testimonials/jonathan.jpg",
-      projectImage: "/images/testimonials/sarah-williamson.jpg"
-    },
-    {
-      quote: "The only contractors we trust with high-rise projects. Their safety record is impeccable and quality unmatched.",
-      name: "Sarah Akinyi",
-      role: "VP Construction, Skyline Properties",
-      image: "/images/testimonials/sarah.jpg",
-      projectImage: "/images/testimonials/james-oconnor.jpg"
-    },
-  ];
-
-  const stats: StatItem[] = [
-    { 
-      title: "Projects Completed", 
-      value: "250+", 
-      description: "Across 12 countries",
-      icon: (
-        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-        </svg>
-      )
-    },
-    { 
-      title: "Safety Milestone", 
-      value: "50K+", 
-      description: "Incident-free hours",
-      icon: (
-        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-        </svg>
-      )
-    },
-    { 
-      title: "Industry Experience", 
-      value: "5+", 
-      description: "Years of excellence",
-      icon: (
-        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-        </svg>
-      )
-    },
-  ];
+const SocialTestimonial: React.FC = () => {
+  const testimonial: TestimonialItem = {
+    title: "First $5k Sale: AI DM Setter",
+    author: "Liam Skaff",
+    postDate: "Jul 19",
+    memberSince: "Member since February 9, 2024",
+    content: "Hey legends! About two weeks ago, I made my first ever sale for the AI DM Setter I've been building for the past eight months. I sold it to an online fitness coach whom I cold outreached to months ago on Instagram.",
+    ps: "P.S. Liam Ottley with his case study and Isaiah Zimmermanvere t..",
+    likes: 58,
+    comments: 24,
+    profileImage: "/images/testimonials/liam-skaff.jpg"
+  };
 
   return (
-    <div className="bg-white">
-      <div className="max-w-7xl mx-auto px-6 py-16 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="max-w-3xl mx-auto text-center mb-14">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Building Trust Through Excellence
-          </h2>
-          <p className="text-base text-gray-600">
-            Join thousands of satisfied clients who&apos;ve transformed their visions into enduring structures
-          </p>
-        </div>
+    <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-md overflow-hidden p-6">
+      {/* Header */}
+      <div className="flex justify-between items-start mb-4">
+        <h2 className="text-xl font-bold text-gray-900">{testimonial.title}</h2>
+        <button className="text-gray-500 hover:text-gray-700">
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+          </svg>
+        </button>
+      </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid gap-8 lg:grid-cols-3 mb-14">
-          {testimonials.map((testimonial, index) => (
-            <div 
-              key={index}
-              className="group relative bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border-2 border-gray-200"
-            >
-              <div className="relative h-48">
-                <Image
-                  className="w-full h-full object-cover"
-                  src={testimonial.projectImage}
-                  alt="Construction project"
-                  width={800}
-                  height={600}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40" />
-              </div>
-              
-              <div className="p-6">
-                <blockquote className="text-base text-gray-600 mb-6">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </blockquote>
-                
-                <div className="flex items-center gap-4">
-                  <Image
-                    className="h-12 w-12 rounded-full border-2 border-white shadow-sm"
-                    src={testimonial.image}
-                    alt={`Avatar of ${testimonial.name}`}
-                    width={48}
-                    height={48}
-                  />
-                  <div>
-                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                    <p className="text-sm text-gray-600">{testimonial.role}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+      {/* Author Info */}
+      <div className="flex items-center gap-3 mb-6">
+        <Image
+          className="h-12 w-12 rounded-full"
+          src={testimonial.profileImage}
+          alt={`${testimonial.author}'s profile`}
+          width={48}
+          height={48}
+        />
+        <div>
+          <div className="flex items-center gap-2">
+            <p className="font-semibold text-gray-900">{testimonial.author}</p>
+            <span className="text-gray-500 text-sm">•</span>
+            <p className="text-gray-500 text-sm">{testimonial.postDate}</p>
+          </div>
+          <p className="text-gray-500 text-sm">{testimonial.memberSince}</p>
         </div>
+      </div>
 
-        {/* Stats Section */}
-        <div className="grid gap-8 lg:grid-cols-3 mt-14">
-          {stats.map((stat, index) => (
-            <div 
-              key={index}
-              className="bg-white rounded-2xl p-6 border-2 border-gray-200"
-            >
-              <div className="flex items-center gap-4 mb-4">
-                <div className="p-2 rounded-lg bg-gray-100">
-                  {stat.icon}
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900">{stat.title}</h3>
-              </div>
-              <p className="text-2xl font-bold text-gray-900 mb-2">{stat.value}</p>
-              <p className="text-sm text-gray-600">{stat.description}</p>
-            </div>
-          ))}
-        </div>
+      {/* Content */}
+      <div className="space-y-4 mb-6">
+        <p className="text-gray-800 leading-relaxed">
+          {testimonial.content}
+        </p>
+        {testimonial.ps && (
+          <p className="text-gray-600 italic">{testimonial.ps}</p>
+        )}
+      </div>
+
+      {/* Engagement Metrics */}
+      <div className="flex items-center gap-4 text-gray-500 text-sm">
+        <span>{testimonial.likes} likes</span>
+        <span>•</span>
+        <span>{testimonial.comments} comments</span>
       </div>
     </div>
   );
 };
 
-export default TestimonialSection;
+export default SocialTestimonial;
