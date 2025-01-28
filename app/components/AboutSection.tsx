@@ -103,52 +103,6 @@ const AboutPage = (): ReactElement => {
           </div>
         </div>
       </section>
-
-      {/* Leadership */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl font-bold text-slate-900 text-center mb-12">
-            Leadership Team
-          </h2>
-          
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                name: "John Carter",
-                role: "CEO & Founder",
-                photo: "/john-carter.jpg"
-              },
-              {
-                name: "Sarah Wilson",
-                role: "Chief Engineer",
-                photo: "/sarah-wilson.jpg"
-              },
-              {
-                name: "Michael Chen",
-                role: "Operations Director",
-                photo: "/michael-chen.jpg"
-              }
-            ].map((member, index) => (
-              <div 
-                key={index}
-                className="group bg-white p-6 rounded-lg border-2 border-slate-200 hover:border-blue-500 transition-colors"
-              >
-                <div className="aspect-square bg-slate-200 rounded-md overflow-hidden border-2 border-slate-200 mb-4">
-                  <img
-                    src={member.photo}
-                    alt={member.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                  />
-                </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-1">
-                  {member.name}
-                </h3>
-                <p className="text-slate-600 text-sm">{member.role}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
