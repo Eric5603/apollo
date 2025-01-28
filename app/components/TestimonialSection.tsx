@@ -44,7 +44,7 @@ const TestimonialSection: React.FC = () => {
   const stats: StatItem[] = [
     { 
       title: "Projects Completed", 
-      value: "1,250+", 
+      value: "250+", 
       description: "Across 12 countries",
       icon: (
         <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
