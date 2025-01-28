@@ -96,7 +96,7 @@ const ReviewSection: React.FC = () => {
             What Our Clients Say
           </h2>
           <p className="text-base text-gray-600">
-            Read genuine reviews from partners who've collaborated with us
+          Read genuine reviews from partners who&apos;ve collaborated with us
           </p>
         </div>
 
