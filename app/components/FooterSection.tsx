@@ -21,9 +21,9 @@ const FooterSection: React.FC = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Facebook, href: "https://www.facebook.com/kinyanjui.mtongu", label: "Facebook" },
+    { icon: Twitter, href: "https://x.com/kimani6pk?t=d5g18XHA7tj-o7MnZhmfDw&s=08", label: "Twitter" },
+    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
   ];
 
   return (
@@ -41,7 +41,7 @@ const FooterSection: React.FC = () => {
 
 
               <p className="text-gray-500 text-base leading-relaxed">
-                Pioneering construction excellence since 2012. 
+                Pioneering construction excellence since 2019. 
                 Certified professionals committed to transforming 
                 visions into enduring structures.
               </p>

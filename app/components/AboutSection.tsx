@@ -69,7 +69,7 @@ const AboutPage = (): ReactElement => {
               </div>
               <div className="aspect-square bg-slate-200 rounded-md overflow-hidden border-2 border-slate-200">
                 <img
-                  src="/construction-team.jpg"
+                  src="/images/Logos/People"
                   alt="Construction team"
                   className="w-full h-full object-cover hover:scale-105 transition-transform"
                 />
