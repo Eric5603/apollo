@@ -1,142 +1,151 @@
 // app/about/page.tsx
 import { ReactElement } from 'react';
 
-interface HeroSection {
-  title: string;
-  content: string;
-  image: string;
-  reverse?: boolean;
-  stats?: Array<{ value: string; label: string }>;
-}
-
-const AboutSection = (): ReactElement => {
-  const sections: HeroSection[] = [
-    // ... (keep section data the same)
-  ];
-
+const AboutPage = (): ReactElement => {
   return (
-    <div className="bg-white">
-      {/* Video Hero */}
-      <section className="relative h-[50vh] md:h-[55vh] rounded-xl overflow-hidden mx-auto max-w-7xl px-4 md:px-6 my-14 shadow-lg">
-        <div className="absolute inset-0 w-full h-full overflow-hidden">
-          <video 
-            autoPlay 
-            muted 
-            loop 
-            className="w-full h-full object-cover scale-105"
-          >
-            <source src="https://videos.pexels.com/video-files/4271760/4271760-hd_1920_1080_30fps.mp4" type="video/mp4" />
-          </video>
-        </div>
-        
-        <div className="relative h-full flex items-center justify-center md:justify-start">
-          <div className="max-w-2xl px-6 py-5 bg-white/95 backdrop-blur-md rounded-xl shadow-md mx-4 transition-all hover:bg-white/100 border-2 border-gray-200">
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 leading-tight">
-              Transform Your Cityscape
-              <span className="text-blue-600 block mt-2 text-3xl md:text-4xl">Tomorrow&apos;s Urban Vision</span>
+    <div className="min-h-screen bg-slate-50">
+      {/* Hero Section */}
+      <section className="relative py-16 border-b-2 border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-14">
+            <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+              Building Excellence Since 2003
             </h1>
-            <p className="text-sm md:text-base text-gray-700 mb-4">
-              Pioneering sustainable solutions for smarter, greener cities
+            <p className="text-base text-slate-600 max-w-3xl mx-auto">
+              Pioneering innovative construction solutions while maintaining timeless craftsmanship
             </p>
-            <button className="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition-colors text-sm md:text-base">
-              Explore Our Vision →
-            </button>
+          </div>
+          
+          <div className="aspect-video bg-slate-200 rounded-lg overflow-hidden border-2 border-slate-200 shadow-md">
+            <video 
+              autoPlay 
+              muted 
+              loop 
+              className="w-full h-full object-cover"
+            >
+              <source src="/construction-site.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
       </section>
 
-      {/* Alternating Hero Sections */}
-      {sections.map((section, index) => (
-        <section key={index} className={`py-16 ${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}>
-          <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-            <div className={`grid md:grid-cols-2 gap-10 items-center ${section.reverse ? 'md:direction-rtl' : ''}`}>
-              {/* Content */}
-              <div className="space-y-6 md:pr-10 lg:pr-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight leading-[1.15]">
-                  {section.title}
-                </h2>
-                <p className="text-lg text-gray-700 leading-relaxed max-w-2xl">
-                  {section.content}
+      {/* Core Values */}
+      <section className="py-16 bg-white border-b-2 border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <h2 className="text-2xl font-bold text-slate-900 text-center mb-12">
+            Our Foundation
+          </h2>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                icon: '🏗️',
+                title: "Structural Integrity",
+                description: "Uncompromising safety standards and material quality"
+              },
+              {
+                icon: '🌱',
+                title: "Sustainable Practice",
+                description: "Eco-conscious building methods and materials"
+              },
+              {
+                icon: '🤝',
+                title: "Community Focus",
+                description: "Enhancing neighborhoods through thoughtful development"
+              }
+            ].map((value, index) => (
+              <div 
+                key={index}
+                className="p-6 bg-slate-50 rounded-lg border-2 border-slate-200 transition-all hover:shadow-md"
+              >
+                <div className="w-12 h-12 bg-white rounded-md border-2 border-slate-200 flex items-center justify-center text-2xl mb-4">
+                  {value.icon}
+                </div>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                  {value.title}
+                </h3>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  {value.description}
                 </p>
-                {section.stats && (
-                  <div className="grid grid-cols-3 gap-4 mt-8">
-                    {section.stats.map((stat, statIndex) => (
-                      <div key={statIndex} className="bg-white p-4 rounded-lg shadow-sm border-2 border-gray-200 text-center">
-                        <div className="text-2xl font-bold text-blue-600 mb-1">{stat.value}</div>
-                        <div className="text-xs font-semibold text-gray-600 tracking-wide uppercase">{stat.label}</div>
-                      </div>
-                    ))}
-                  </div>
-                )}
               </div>
-
-              {/* Image */}
-              <div className="relative h-[400px] md:h-[450px] rounded-xl overflow-hidden shadow-lg">
-                <img
-                  src={section.image}
-                  alt={section.title}
-                  className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900/60" />
-              </div>
-            </div>
+            ))}
           </div>
-        </section>
-      ))}
+        </div>
+      </section>
 
       {/* Mission Statement */}
-      <section className="py-16 bg-white">
-        <div className="max-w-5xl mx-auto px-4 md:px-6 lg:px-8 text-center">
-          <div className="mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-              Foundational Principles
-            </h2>
-            
-            <blockquote className="relative text-xl leading-relaxed font-serif italic text-gray-700 max-w-3xl mx-auto">
-              <span className="absolute -left-5 top-0 text-4xl text-blue-600">“</span>
-              <p className="px-6">
-                True innovation in construction harmonizes human ambition with ecological stewardship. 
-                We create resilient spaces that elevate communities while actively regenerating 
-                the environments they inhabit.
-              </p>
-              <span className="absolute -right-5 bottom-0 text-4xl text-blue-600">”</span>
-            </blockquote>
-          </div>
-
-          <div className="mt-12 pt-12 border-t-2 border-gray-200">
-            <div className="grid md:grid-cols-3 gap-8 md:gap-10">
-              {[
-                { 
-                  title: "Safety as Culture", 
-                  icon: "🛡️",
-                  text: "Beyond compliance: embedded protective systems" 
-                },
-                { 
-                  title: "Circular Materials", 
-                  icon: "♻️",
-                  text: "97% recycled/resourced content average" 
-                },
-                { 
-                  title: "Microscale Precision", 
-                  icon: "📏",
-                  text: "Laser-guided quality assurance systems" 
-                }
-              ].map((item, index) => (
-                <div key={index} className="group px-4 py-5">
-                  <div className="flex flex-col items-center gap-4 transition-all hover:-translate-y-1">
-                    <div className="w-14 h-14 bg-blue-600/10 rounded-xl flex items-center justify-center text-2xl transition-colors group-hover:bg-blue-600/20 border-2 border-gray-200">
-                      <span className="text-blue-600">{item.icon}</span>
-                    </div>
-                    <div className="space-y-2">
-                      <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
-                      <p className="text-gray-600 text-sm font-medium leading-tight max-w-xs mx-auto">
-                        {item.text}
-                      </p>
-                    </div>
-                  </div>
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="bg-white rounded-lg border-2 border-slate-200 p-8 shadow-sm">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="space-y-4">
+                <h2 className="text-2xl font-bold text-slate-900">
+                  Our Mission
+                </h2>
+                <p className="text-base text-slate-600 leading-relaxed">
+                  To revolutionize urban development through innovative engineering while preserving 
+                  community values and environmental sustainability.
+                </p>
+                <div className="pl-4 border-l-4 border-blue-500">
+                  <p className="text-slate-600 text-sm italic">
+                    "Building not just structures, but sustainable futures"
+                  </p>
                 </div>
-              ))}
+              </div>
+              <div className="aspect-square bg-slate-200 rounded-md overflow-hidden border-2 border-slate-200">
+                <img
+                  src="/construction-team.jpg"
+                  alt="Construction team"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform"
+                />
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <h2 className="text-2xl font-bold text-slate-900 text-center mb-12">
+            Leadership Team
+          </h2>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                name: "John Carter",
+                role: "CEO & Founder",
+                photo: "/john-carter.jpg"
+              },
+              {
+                name: "Sarah Wilson",
+                role: "Chief Engineer",
+                photo: "/sarah-wilson.jpg"
+              },
+              {
+                name: "Michael Chen",
+                role: "Operations Director",
+                photo: "/michael-chen.jpg"
+              }
+            ].map((member, index) => (
+              <div 
+                key={index}
+                className="group bg-white p-6 rounded-lg border-2 border-slate-200 hover:border-blue-500 transition-colors"
+              >
+                <div className="aspect-square bg-slate-200 rounded-md overflow-hidden border-2 border-slate-200 mb-4">
+                  <img
+                    src={member.photo}
+                    alt={member.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                  />
+                </div>
+                <h3 className="text-lg font-semibold text-slate-900 mb-1">
+                  {member.name}
+                </h3>
+                <p className="text-slate-600 text-sm">{member.role}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -144,4 +153,4 @@ const AboutSection = (): ReactElement => {
   );
 };
 
-export default AboutSection;
+export default AboutPage;
