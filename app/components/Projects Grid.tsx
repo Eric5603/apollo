@@ -16,9 +16,9 @@ const ProjectsGrid = () => {
   const projects: ConstructionProject[] = [
     {
       title: 'Downtown Commercial Complex',
-      location: 'New York, NY',
+      location: 'Machakos County',
       type: 'Commercial Development',
-      image: '/images/projects/commercial-tower.jpg',
+      image: '/images/projects/Project1.jpg',
       alt: 'Modern glass commercial tower under construction',
       size: '850,000 sq.ft',
       completion: '2023',
@@ -26,9 +26,9 @@ const ProjectsGrid = () => {
     },
     {
       title: 'Lakeside Residential Community',
-      location: 'Austin, TX',
+      location: 'Kajiado County',
       type: 'Residential Development',
-      image: '/images/projects/residential-community.jpg',
+      image: '/images/projects/Project2.jpg',
       alt: 'Aerial view of residential housing community',
       size: '120 Acres',
       completion: '2024',

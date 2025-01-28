@@ -1,12 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 
-interface TestimonialItem {
-  quote: string;
-  name: string;
+interface ReviewItem {
+  comment: string;
+  author: string;
   role: string;
-  image: string;
-  projectImage: string;
+  avatar: string;
+  rating: number;
 }
 
 interface StatItem {
@@ -16,28 +16,28 @@ interface StatItem {
   icon: React.ReactNode;
 }
 
-const TestimonialSection: React.FC = () => {
-  const testimonials: TestimonialItem[] = [
+const ReviewSection: React.FC = () => {
+  const reviews: ReviewItem[] = [
     {
-      quote: "Their attention to detail transformed our commercial complex into a landmark. Every deadline was met with military precision.",
-      name: "Stephen Kariuki",
+      comment: "Their attention to detail transformed our commercial complex into a landmark. Every deadline was met with military precision.",
+      author: "Stephen Kariuki",
       role: "CEO, Urban Developments LLC",
-      image: "/images/testimonials/stephen.jpg",
-      projectImage: "/images/testimonials/michael-chen.jpg"
+      avatar: "/images/testimonials/stephen.jpg",
+      rating: 5
     },
     {
-      quote: "From groundbreaking to ribbon-cutting, the team maintained perfect communication. Our hospital project came in 15% under budget.",
-      name: "Jonathan Mwangi",
+      comment: "From groundbreaking to ribbon-cutting, the team maintained perfect communication. Our hospital project came in 15% under budget.",
+      author: "Jonathan Mwangi",
       role: "Director, HealthCorp International",
-      image: "/images/testimonials/jonathan.jpg",
-      projectImage: "/images/testimonials/sarah-williamson.jpg"
+      avatar: "/images/testimonials/jonathan.jpg",
+      rating: 5
     },
     {
-      quote: "The only contractors we trust with high-rise projects. Their safety record is impeccable and quality unmatched.",
-      name: "Sarah Akinyi",
+      comment: "The only contractors we trust with high-rise projects. Their safety record is impeccable and quality unmatched.",
+      author: "Sarah Akinyi",
       role: "VP Construction, Skyline Properties",
-      image: "/images/testimonials/sarah.jpg",
-      projectImage: "/images/testimonials/james-oconnor.jpg"
+      avatar: "/images/testimonials/sarah.jpg",
+      rating: 5
     },
   ];
 
@@ -74,56 +74,60 @@ const TestimonialSection: React.FC = () => {
     },
   ];
 
+  const renderStars = (rating: number) => {
+    return [...Array(5)].map((_, index) => (
+      <svg
+        key={index}
+        className={`w-5 h-5 ${index < rating ? 'text-yellow-400' : 'text-gray-300'}`}
+        fill="currentColor"
+        viewBox="0 0 20 20"
+      >
+        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+      </svg>
+    ));
+  };
+
   return (
     <div className="bg-white">
       <div className="max-w-7xl mx-auto px-6 py-16 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-14">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Building Trust Through Excellence
+            What Our Clients Say
           </h2>
           <p className="text-base text-gray-600">
-            Join thousands of satisfied clients who&apos;ve transformed their visions into enduring structures
+            Read genuine reviews from partners who've collaborated with us
           </p>
         </div>
 
-        {/* Testimonials Grid */}
+        {/* Reviews Grid */}
         <div className="grid gap-8 lg:grid-cols-3 mb-14">
-          {testimonials.map((testimonial, index) => (
+          {reviews.map((review, index) => (
             <div 
               key={index}
-              className="group relative bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border-2 border-gray-200"
+              className="relative bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100"
             >
-              <div className="relative h-48">
+              <div className="flex items-start gap-4 mb-4">
                 <Image
-                  className="w-full h-full object-cover"
-                  src={testimonial.projectImage}
-                  alt="Construction project"
-                  width={800}
-                  height={600}
+                  className="h-12 w-12 rounded-full border-2 border-white shadow-sm"
+                  src={review.avatar}
+                  alt={`Avatar of ${review.author}`}
+                  width={48}
+                  height={48}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40" />
-              </div>
-              
-              <div className="p-6">
-                <blockquote className="text-base text-gray-600 mb-6">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </blockquote>
-                
-                <div className="flex items-center gap-4">
-                  <Image
-                    className="h-12 w-12 rounded-full border-2 border-white shadow-sm"
-                    src={testimonial.image}
-                    alt={`Avatar of ${testimonial.name}`}
-                    width={48}
-                    height={48}
-                  />
-                  <div>
-                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                    <p className="text-sm text-gray-600">{testimonial.role}</p>
-                  </div>
+                <div className="flex-1">
+                  <p className="font-semibold text-gray-900">{review.author}</p>
+                  <p className="text-sm text-gray-600">{review.role}</p>
+                </div>
+                <div className="flex items-center gap-1">
+                  {renderStars(review.rating)}
                 </div>
               </div>
+              
+              <blockquote className="text-gray-600 relative pl-4 border-l-2 border-blue-200">
+                <span className="absolute left-0 top-0 text-2xl text-gray-400 -translate-y-1">“</span>
+                {review.comment}
+              </blockquote>
             </div>
           ))}
         </div>
@@ -133,7 +137,7 @@ const TestimonialSection: React.FC = () => {
           {stats.map((stat, index) => (
             <div 
               key={index}
-              className="bg-white rounded-2xl p-6 border-2 border-gray-200"
+              className="bg-white rounded-2xl p-6 border border-gray-200"
             >
               <div className="flex items-center gap-4 mb-4">
                 <div className="p-2 rounded-lg bg-gray-100">
@@ -151,4 +155,4 @@ const TestimonialSection: React.FC = () => {
   );
 };
 
-export default TestimonialSection;
+export default ReviewSection;
