@@ -21,7 +21,7 @@ const ProjectsGrid = () => {
       image: '/images/projects/Project1.jpg',
       alt: 'Commercial complex',
       size: '850,000 sq.ft',
-      completion: '2023',
+      completion: '2024',
       rating: 5
     },
     {
@@ -31,12 +31,12 @@ const ProjectsGrid = () => {
       image: '/images/projects/Project2.jpg',
       alt: 'concrete project',
       size: '120 Acres',
-      completion: '2024',
+      completion: '2023',
       rating: 4
     },
     {
       title: 'Bridge Construction',
-      location: 'Chicago, IL',
+      location: 'Kisumu',
       type: 'Infrastructure',
       image: '/images/projects/Project3.jpg',
       alt: 'Modern suspension bridge under construction',
@@ -46,7 +46,7 @@ const ProjectsGrid = () => {
     },
     {
       title: 'Renovation Project',
-      location: 'Boston, MA',
+      location: 'Nairobi',
       type: 'Restoration',
       image: '/images/projects/Project4.jpg',
       alt: 'Renovation project',
@@ -71,7 +71,7 @@ const ProjectsGrid = () => {
       image: '/images/projects/Project6.jpg',
       alt: 'Residential development',
       size: '50,000 sq.ft',
-      completion: '2019',
+      completion: '2020',
       rating: 4
     }
   ];

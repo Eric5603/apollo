@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image'; 
 import { Facebook, Twitter, Linkedin, MapPin, Phone, Mail } from 'lucide-react';
 
 const FooterSection: React.FC = () => {
@@ -14,9 +15,9 @@ const FooterSection: React.FC = () => {
   ];
 
   const contactInfo = [
-    { icon: MapPin, value: "123 Construction Lane, Metro City, MC 12345" },
-    { icon: Phone, value: "+1 (555) 123-4567" },
-    { icon: Mail, value: "hello@buildmaster.com" },
+    { icon: MapPin, value: "Kiambu Town, Kenya" },
+    { icon: Phone, value: "+254 772 464437" },
+    { icon: Mail, value: "throughbuilders@gmail.com" },
   ];
 
   const socialLinks = [
@@ -32,9 +33,13 @@ const FooterSection: React.FC = () => {
           {/* Brand Section */}
           <div className="md:col-span-4 lg:col-span-4">
             <div className="flex flex-col space-y-4">
-              <h2 className="text-4xl font-bold text-gray-900 tracking-tight">
-                Articulate<span className="text-indigo-600">Construction</span>
-              </h2>
+
+                 {/* Simple Clean Logo */}
+                    <Link href="/" className="text-xl font-bold text-slate-900">
+                      <Image src="/Logo/logo.jpg" alt="Logo" width={50} height={50} />
+                    </Link>
+
+
               <p className="text-gray-500 text-base leading-relaxed">
                 Pioneering construction excellence since 2012. 
                 Certified professionals committed to transforming 

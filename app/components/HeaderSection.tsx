@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const HeaderSection: React.FC = () => {
   const [isMenuOpen, setMenuOpen] = useState<boolean>(false);
@@ -12,7 +13,7 @@ const HeaderSection: React.FC = () => {
         <div className="flex h-20 items-center justify-between">
           {/* Simple Clean Logo */}
           <Link href="/" className="text-xl font-bold text-slate-900">
-            Articulate
+            <Image src="/Logo/logo.jpg" alt="Logo" width={50} height={50} />
           </Link>
 
           {/* Centered Desktop Navigation */}

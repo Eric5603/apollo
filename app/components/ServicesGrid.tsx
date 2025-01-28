@@ -14,7 +14,7 @@ const ServicesGrid = () => {
     {
       title: 'General Contracting',
       description: 'Full-service construction management from concept to completion',
-      image: '/images/services/general-contracting.jpg',
+      image: '/images/Solutions/Solutions1.jpg',
       alt: 'Construction site management team',
       features: [
         'Project scheduling & coordination',
