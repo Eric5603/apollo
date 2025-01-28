@@ -48,31 +48,37 @@ const FeatureSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
-            <div 
-              key={project.id}
-              className="group relative bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 ease-out border-2 border-gray-200 hover:border-blue-200"
-            >
-              <div className="relative h-64 overflow-hidden rounded-t-lg">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  style={{ objectPosition: 'center center' }}
-                />
-                <span className="absolute top-4 right-4 bg-blue-100 text-blue-800 px-3 py-1 rounded-lg text-sm font-semibold">
-                  {project.category}
-                </span>
+        <div className="overflow-hidden">
+          <div className="flex animate-marquee w-[200%] gap-6">
+            {[...projects, ...projects].map((project, index) => (
+              <div 
+                key={index}
+                className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3"
+              >
+                <div 
+                  className="group relative bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 ease-out border-2 border-gray-200 hover:border-blue-200"
+                >
+                  <div className="relative h-64 overflow-hidden rounded-t-lg">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      style={{ objectPosition: 'center center' }}
+                    />
+                    <span className="absolute top-4 right-4 bg-blue-100 text-blue-800 px-3 py-1 rounded-lg text-sm font-semibold">
+                      {project.category}
+                    </span>
+                  </div>
+                  
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
+                    <p className="text-gray-600 leading-relaxed">{project.description}</p>
+                  </div>
+                </div>
               </div>
-              
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{project.description}</p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         <div className="mt-14 text-center">
@@ -97,6 +103,16 @@ const FeatureSection: React.FC = () => {
           </a>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+          animation: marquee 30s linear infinite;
+        }
+      `}</style>
     </section>
   );
 };

@@ -51,7 +51,7 @@ export default function GetAQuote() {
   };
 
   return (
-    <div className="h-screen bg-gradient-to-b from-gray-50 to-white flex items-center justify-center py-16">
+    <div className="h-screen bg-gradient-to-b from-gray-50 to-white flex items-center justify-center py-32">
       {/* Contact Form Section */}
       <section className="w-full max-w-lg bg-white rounded-2xl shadow-xl p-6 border-2 border-gray-200">
         <form onSubmit={handleSubmit} className="space-y-4">
