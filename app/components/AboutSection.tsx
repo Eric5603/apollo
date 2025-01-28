@@ -88,7 +88,7 @@ const AboutPage = (): ReactElement => {
                 </p>
                 <div className="pl-4 border-l-4 border-blue-500">
                   <p className="text-slate-600 text-sm italic">
-                    "Building not just structures, but sustainable futures"
+                  &ldquo;Building not just structures, but sustainable futures&rdquo;
                   </p>
                 </div>
               </div>
