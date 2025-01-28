@@ -36,7 +36,7 @@ const FooterSection: React.FC = () => {
 
                  {/* Simple Clean Logo */}
                     <Link href="/" className="text-xl font-bold text-slate-900">
-                      <Image src="/Logo/logo.jpg" alt="Logo" width={50} height={50} />
+                      <Image src="/Logo/logo.png" alt="Logo" width={50} height={50} />
                     </Link>
 
 
