@@ -50,12 +50,12 @@ const FeatureSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="overflow-hidden">
-          <div className="flex animate-marquee w-[200%] gap-6">
+        <div className="overflow-hidden relative">
+          <div className="flex animate-marquee hover:animation-paused">
             {[...projects, ...projects].map((project, index) => (
               <div 
                 key={index}
-                className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3"
+                className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3"
               >
                 <div 
                   className="group relative bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 ease-out border-2 border-gray-200 hover:border-blue-200"
@@ -105,16 +105,6 @@ const FeatureSection: React.FC = () => {
           </a>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-marquee {
-          animation: marquee 30s linear infinite;
-        }
-      `}</style>
     </section>
   );
 };
