@@ -13,7 +13,7 @@ const HeaderSection: React.FC = () => {
         <div className="flex h-20 items-center justify-between">
           {/* Simple Clean Logo */}
           <Link href="/" className="text-xl font-bold text-slate-900">
-            <Image src="/images/Logos/logo.jpg" alt="Logo" width={50} height={50} className="roundend-lg" />
+           Articulate  <br/>  <span className="text-blue-600">Constructions</span>
           </Link>
 
           {/* Centered Desktop Navigation */}
