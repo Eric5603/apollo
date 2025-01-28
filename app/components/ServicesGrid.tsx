@@ -26,7 +26,7 @@ const ServicesGrid = () => {
     {
       title: 'Design-Build',
       description: 'Seamless integration of design and construction expertise',
-      image: '/images/services/design-build.jpg',
+      image: '/images/Solutions/Solutions2.png',
       alt: 'Architect reviewing blueprints',
       features: [
         'Single-source responsibility',
@@ -38,7 +38,7 @@ const ServicesGrid = () => {
     {
       title: 'Renovation & Restoration',
       description: 'Preserving heritage while implementing modern solutions',
-      image: '/images/services/renovation.jpg',
+      image: '/images/Solutions/Solutions3.png',
       alt: 'Historic building restoration',
       features: [
         'Historical preservation',
@@ -50,7 +50,7 @@ const ServicesGrid = () => {
     {
       title: 'Civil Infrastructure',
       description: 'Building the foundations for community growth',
-      image: '/images/services/infrastructure.jpg',
+      image: '/images/Solutions/Solutions4.png',
       alt: 'Bridge construction project',
       features: [
         'Site development',
@@ -62,7 +62,7 @@ const ServicesGrid = () => {
     {
       title: 'Sustainable Construction',
       description: 'Eco-friendly building solutions for a greener future',
-      image: '/images/services/sustainable.jpg',
+      image: '/images/Solutions/Solutions5.png',
       alt: 'LEED certified building',
       features: [
         'LEED certification',
@@ -74,7 +74,7 @@ const ServicesGrid = () => {
     {
       title: 'Project Management',
       description: 'Expert oversight for complex construction projects',
-      image: '/images/services/project-management.jpg',
+      image: '/images/Solutions/Solutions6.png',
       alt: 'Team reviewing construction plans',
       features: [
         'Risk management',
