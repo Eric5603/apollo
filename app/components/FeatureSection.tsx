@@ -16,21 +16,21 @@ const FeatureSection: React.FC = () => {
     {
       id: 1,
       title: 'Modern Residential Complex',
-      image: '/images/Features1.jpg',
+      image: '/images/Features/Features1.jpg',
       description: 'Sustainable living spaces blending modern architecture with eco-friendly innovation',
       category: 'Residential'
     },
     {
       id: 2,
       title: 'Commercial Office Tower',
-      image: '/images/Features2.jpg',
+      image: '/images/Features/Features2.jpg',
       description: 'State-of-the-art corporate hub featuring smart building technology',
       category: 'Commercial'
     },
     {
       id: 3,
       title: 'Industrial Logistics Hub',
-      image: '/images/Features3.jpg',
+      image: '/images/Features/Features3.jpg',
       description: 'Advanced warehouse facility with automated inventory systems',
       category: 'Industrial'
     },
