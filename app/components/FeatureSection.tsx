@@ -75,28 +75,6 @@ const FeatureSection: React.FC = () => {
             </div>
           ))}
         </div>
-
-        <div className="mt-14 text-center">
-          <a
-            href="/projects"
-            className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-semibold rounded-lg text-white bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 transition-all duration-300 shadow-sm hover:shadow-md"
-          >
-            View All Projects
-            <svg
-              className="ml-3 w-4 h-4 transition-transform group-hover:translate-x-1"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </a>
-        </div>
       </div>
     </section>
   );
