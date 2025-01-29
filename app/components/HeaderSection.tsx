@@ -12,7 +12,7 @@ const HeaderSection: React.FC = () => {
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Simple Clean Logo */}
-          <Link href="/" className="text-4xl font-bold text-slate-900">
+          <Link href="/" className="text-xl font-bold text-slate-900">
            Articulate  <span className="text-blue-600 space-x-2">Constructions</span>
           </Link>
 
