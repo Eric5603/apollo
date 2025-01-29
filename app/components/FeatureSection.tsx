@@ -23,7 +23,7 @@ const FeatureSection: React.FC = () => {
     {
       id: 2,
       title: 'Commercial Office Tower',
-      image: '/images/Features/Features4.jpg',
+      image: '/images/Features/Features5.jpg',
       description: 'State-of-the-art corporate hub featuring smart building technology',
       category: 'Commercial'
     },
