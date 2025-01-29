@@ -2,9 +2,10 @@
 import { useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = 'https://ftnozlnzjctklpmtbmix.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ0bm96bG56amN0a2xwbXRibWl4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzc3MTE1MTMsImV4cCI6MjA1MzI4NzUxM30.x8udPBoquY0Ia4QN-GhhMDUdy7eoakhApenMG-xw4yo';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_KEY!;
 const supabaseClient = createClient(supabaseUrl, supabaseKey);
+
 
 interface FormData {
   name: string;
