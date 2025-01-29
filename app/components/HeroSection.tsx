@@ -50,7 +50,7 @@ export default function ModernConstructionHero() {
   return (
     <section 
       ref={containerRef}
-      className="min-h-screen bg-white relative overflow-hidden isolate"
+      className="min-h-screen bg-slate-50 relative overflow-hidden isolate"
     >
       {/* Main Content Container */}
       <div className="container mx-auto px-6 md:px-8 min-h-screen flex items-center relative z-10">
@@ -101,17 +101,17 @@ export default function ModernConstructionHero() {
             {/* CTA Links */}
             <div className="flex flex-wrap gap-4 mt-8">
               <Link
-                href="/start-project"
+                href="/get-a-quote"
                 className="px-6 py-4 bg-blue-600 text-white rounded-lg font-bold flex items-center gap-3 hover:bg-blue-700 transition-colors text-base shadow-lg hover:shadow-blue-200"
               >
-                Start New Project
+                Request a Quote
               </Link>
               
               <Link
-                href="/innovations"
+                href="/solutions"
                 className="px-6 py-4 border-2 border-gray-900 text-gray-900 rounded-lg font-bold hover:border-blue-600 hover:text-blue-600 transition-colors text-base shadow-sm hover:shadow-gray-200"
               >
-                View Innovations
+                View Services 
               </Link>
             </div>
           </motion.div>
