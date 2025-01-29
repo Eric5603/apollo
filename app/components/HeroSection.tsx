@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import { Link } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
 
 const AnimatedCounter = ({ value }: { value: string }) => {
@@ -138,9 +139,7 @@ export default function ModernConstructionHero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 mt-8">
-            <motion.a
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+            <Link
                 href="/get-a-quote"
                 className="px-6 py-4 bg-blue-600 text-white rounded-lg font-bold flex items-center gap-3 hover:bg-blue-700 transition-colors text-base shadow-lg hover:shadow-blue-200"
               >
@@ -148,16 +147,14 @@ export default function ModernConstructionHero() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                 </svg>
                 Start New Project
-              </motion.a>
+              </Link>
 
-              <motion.a
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <Link
                 href="/projects"
                 className="px-6 py-4 border-2 border-gray-900 text-gray-900 rounded-lg font-bold hover:border-blue-600 hover:text-blue-600 transition-colors text-base shadow-sm hover:shadow-gray-200"
               >
                 View Innovations
-              </motion.a>
+              </Link>
             </div>
           </motion.div>
 
