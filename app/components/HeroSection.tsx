@@ -1,51 +1,10 @@
 "use client";
 
-import { motion, useScroll, useTransform, useInView } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
+import { useRef } from "react";
 import Link from "next/link";
 
-const AnimatedCounter = ({ value }: { value: string }) => {
-  const [count, setCount] = useState(0);
-  const ref = useRef(null);
-  const inView = useInView(ref);
-
-  const isNumeric = (val: string) => !isNaN(Number(val.replace('+', '')));
-  const parseValue = (val: string) => parseInt(val.replace('+', '')) || 0;
-
-  useEffect(() => {
-    if (inView && isNumeric(value)) {
-      const target = parseValue(value);
-      const duration = Math.min(2000, target * 20);
-
-      let start = 0;
-      const increment = target / (duration / 50);
-
-      const timer = setInterval(() => {
-        start += increment;
-        if (start >= target) {
-          setCount(target);
-          clearInterval(timer);
-        } else {
-          setCount(Math.ceil(start));
-        }
-      }, 50);
-
-      return () => clearInterval(timer);
-    }
-  }, [inView, value]);
-
-  return (
-    <span ref={ref}>
-      {isNumeric(value) ? `${Math.min(count, parseValue(value)).toLocaleString()}+` : value}
-    </span>
-  );
-};
-
 export default function ModernConstructionHero() {
-  const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({ target: containerRef });
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
 
   return (
     <section 
@@ -74,31 +33,19 @@ export default function ModernConstructionHero() {
       <div className="container mx-auto px-6 md:px-8 min-h-screen flex items-center relative z-10">
         <div className="grid lg:grid-cols-2 gap-14 w-full items-center py-16">
           {/* Left Content Column */}
-          <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-6 relative"
-          >
+          <div className="space-y-6 relative">
             {/* Live Status Badge */}
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="w-fit mb-14 relative group overflow-hidden rounded-full bg-blue-600 px-4 py-1.5 shadow-lg cursor-pointer border-2 border-gray-200"
-            >
+            <div className="w-fit mb-14 relative group overflow-hidden rounded-full bg-blue-600 px-4 py-1.5 shadow-lg border-2 border-gray-200">
               <div className="flex items-center gap-2">
                 <div className="relative flex h-3 w-3">
-                  <motion.span
-                    animate={{ scale: [1, 1.4, 1] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                    className="absolute inline-flex h-full w-full rounded-full bg-white opacity-75"
-                  />
+                  <span className="absolute inline-flex h-full w-full rounded-full bg-white opacity-75 animate-ping" />
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-white" />
                 </div>
                 <span className="text-white font-medium text-sm tracking-wider">
                   LIVE CONSTRUCTION UPDATES
                 </span>
               </div>
-            </motion.div>
+            </div>
 
             {/* Headings */}
             <div className="space-y-4">
@@ -124,7 +71,7 @@ export default function ModernConstructionHero() {
                 View Innovations
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
