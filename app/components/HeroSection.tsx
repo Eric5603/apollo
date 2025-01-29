@@ -11,8 +11,8 @@ export default function ModernConstructionHero() {
       ref={containerRef}
       className="min-h-screen bg-white relative overflow-hidden isolate"
     >
-      {/* Enhanced Dotted Background */}
-      <div className="absolute inset-0 z-0 opacity-30">
+      {/* Enhanced Dotted Background on Extra Surface */}
+      <div className="absolute inset-0 z-0 opacity-30 pointer-events-none">
         <svg 
           className="absolute inset-0 w-full h-full"
           xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +25,7 @@ export default function ModernConstructionHero() {
           >
             <circle cx="10" cy="10" r="2" className="fill-gray-800" />
           </pattern>
-          <rect width="100%" height="100%" fill="url(#dot-pattern)" />
+          <rect width="100%" height="100%" fill="url(#dot-pattern)" className="mask-video-overlay" />
         </svg>
       </div>
 
