@@ -139,22 +139,49 @@ export default function ModernConstructionHero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 mt-8">
-            <Link
-                href="/get-a-quote"
-                className="px-6 py-4 bg-blue-600 text-white rounded-lg font-bold flex items-center gap-3 hover:bg-blue-700 transition-colors text-base shadow-lg hover:shadow-blue-200"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                </svg>
-                Start New Project
-              </Link>
+                <Link
+                  href="/get-a-quote"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium inline-flex items-center gap-2 transition-colors"
+                >
+                  Get a Quote
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-4 w-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </Link>
 
-              <Link
-                href="/projects"
-                className="px-6 py-4 border-2 border-gray-900 text-gray-900 rounded-lg font-bold hover:border-blue-600 hover:text-blue-600 transition-colors text-base shadow-sm hover:shadow-gray-200"
-              >
-                View Innovations
-              </Link>
+                <Link
+                  href="/solutions"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium inline-flex items-center gap-2 transition-colors"
+                >
+                  View our Services
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-4 w-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </Link>
+
+              
             </div>
           </motion.div>
 
