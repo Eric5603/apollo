@@ -114,10 +114,14 @@ export default function GetAQuote() {
                 onChange={handleChange}
                 className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl appearance-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
               >
-                <option value="">Select project type</option>
-                <option value="quote">Request a Quote</option>
-                <option value="project">New Project</option>
-                <option value="job">Career Opportunity</option>
+                <option value="project">General Contracting</option>
+                <option value="project">Structural Drawings</option>
+                <option value="project">Renovation & Restoration</option>
+                <option value="project">Civil Infrastructure</option>
+                <option value="project">Architectural Designs</option>
+                <option value="project">Project Management</option>
+                <option value="others">Others</option>
+
               </select>
               <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none">
                 <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
