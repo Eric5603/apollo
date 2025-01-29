@@ -135,7 +135,7 @@ export default function ModernConstructionHero() {
                 className="w-full h-full object-cover"
                 poster="/images/construction-poster.jpg"
               >
-                <source src="https://videos.pexels.com/video-files/5567711/5567711-hd_1920_1080_30fps.mp4" type="video/mp4" />
+                <source src="/images/construction.mp4" type="video/mp4" />
               </video>
             </div>
           </motion.div>
