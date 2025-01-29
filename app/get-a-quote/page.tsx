@@ -114,13 +114,13 @@ export default function GetAQuote() {
                 onChange={handleChange}
                 className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl appearance-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
               >
-                <option value="project">General Contracting</option>
-                <option value="project">Structural Drawings</option>
-                <option value="project">Renovation & Restoration</option>
-                <option value="project">Civil Infrastructure</option>
-                <option value="project">Architectural Designs</option>
-                <option value="project">Project Management</option>
-                <option value="others">Others</option>
+                <option value="">General Contracting</option>
+                <option value="/structural-drawings">Structural Drawings</option>
+                <option value="/renovation-and-restoration">Renovation & Restoration</option>
+                <option value="/civil-infrastructure">Civil Infrastructure</option>
+                <option value="/architectural-designs">Architectural Designs</option>
+                <option value="/project-management">Project Management</option>
+                <option value="/others">Others</option>
 
               </select>
               <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none">
