@@ -15,7 +15,7 @@ const FooterSection: React.FC = () => {
   ];
 
   const contactInfo = [
-    { icon: MapPin, value: "Kiambu Town, Kenya" },
+    { icon: MapPin, value: " 24 Building, Next to Equity Bank, Kiambu Town" },
     { icon: Phone, value: "+254 772 464437" },
     { icon: Mail, value: "throughbuilders@gmail.com" },
   ];
