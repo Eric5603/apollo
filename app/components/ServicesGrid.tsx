@@ -13,7 +13,7 @@ const ServicesGrid = () => {
   const services: ConstructionService[] = [
     {
       title: 'General Contracting',
-      description: 'Full-service construction management from concept to completion',
+      description: 'Masterful Execution from Vision to Reality. Experience end-to-end construction leadership that transforms concepts into landmark structures. Our general contracting expertise orchestrates every phase with military precision—seamless scheduling, rigorous quality assurance, and fiscal mastery—ensuring your project transcends expectations.',
       image: '/images/Solutions/Solutions1.png',
       alt: 'Construction site management team',
       features: [
@@ -24,8 +24,8 @@ const ServicesGrid = () => {
       ]
     },
     {
-      title: 'Design-Build',
-      description: 'Seamless integration of design and construction expertise',
+      title: 'Structural Drawings',
+      description: 'Where Ingenuity Meets Integrity. Bridging imagination and engineering, our structural drawings epitomize innovation fused with exactitude. As your single-source authority, we deploy cutting-edge design integration and value-driven strategies to accelerate timelines without compromising brilliance.',
       image: '/images/Solutions/Solutions2.png',
       alt: 'Architect reviewing blueprints',
       features: [
@@ -37,7 +37,7 @@ const ServicesGrid = () => {
     },
     {
       title: 'Renovation & Restoration',
-      description: 'Preserving heritage while implementing modern solutions',
+      description: 'Honoring Heritage, Elevating Modernity. Breathe new life into architectural treasures with our sensitive restoration ethos. We marry historical preservation with 21st-century innovation—structural fortification, energy-efficient retrofitting, and adaptive reuse—to create spaces where timeless elegance coexists with contemporary functionality.',
       image: '/images/Solutions/Solutions3.jpg',
       alt: 'Historic building restoration',
       features: [
@@ -49,7 +49,7 @@ const ServicesGrid = () => {
     },
     {
       title: 'Civil Infrastructure',
-      description: 'Building the foundations for community growth',
+      description: 'Engineering Progress, Building Communities. Shape the future of cities with infrastructure designed to endure. From critical road networks to sustainable utility ecosystems, we lay the groundwork for societal advancement. Our earthwork mastery and precision engineering ensure projects stand as testaments to both form and function.',
       image: '/images/Solutions/Solutions4.jpg',
       alt: 'Bridge construction project',
       features: [
@@ -60,8 +60,8 @@ const ServicesGrid = () => {
       ]
     },
     {
-      title: 'Sustainable Construction',
-      description: 'Eco-friendly building solutions for a greener future',
+      title: 'Architectural Designs',
+      description: 'Sustainable Vision, Responsible Execution. Pioneering eco-conscious architecture that marries aesthetics with planetary stewardship. Our LEED-certified designs leverage energy-smart systems, renewable materials, and waste-neutral practices to create spaces that inspire while nurturing the environment.',
       image: '/images/Solutions/Solutions5.jpg',
       alt: 'LEED certified building',
       features: [
@@ -73,7 +73,7 @@ const ServicesGrid = () => {
     },
     {
       title: 'Project Management',
-      description: 'Expert oversight for complex construction projects',
+      description: 'The Science of Seamless Delivery. Command your project’s success with our strategic oversight. We optimize risks, costs, and timelines through data-driven governance, transforming complexity into clarity. From stakeholder alignment to resource orchestration, we turn ambitious visions into flawlessly executed realities.',
       image: '/images/Solutions/Solutions6.jpg',
       alt: 'Team reviewing construction plans',
       features: [
@@ -148,24 +148,6 @@ const ServicesGrid = () => {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* CTA Section */}
-          <div className="mt-14 text-center">
-            <button className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 transition-all shadow-sm">
-              Explore All Capabilities
-              <svg 
-                className="ml-2 -mr-1 w-4 h-4" 
-                fill="currentColor" 
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </button>
           </div>
         </div>
       </section>

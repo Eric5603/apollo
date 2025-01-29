@@ -141,7 +141,7 @@ export default function ModernConstructionHero() {
             <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="/request-quote"
+                href="/get-a-quote"
                 className="px-6 py-4 bg-blue-600 text-white rounded-lg font-bold flex items-center gap-3 hover:bg-blue-700 transition-colors text-base shadow-lg hover:shadow-blue-200"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

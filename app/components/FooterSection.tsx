@@ -35,8 +35,8 @@ const FooterSection: React.FC = () => {
             <div className="flex flex-col space-y-4">
 
                  {/* Simple Clean Logo */}
-                    <Link href="/" className="text-xl font-bold text-slate-900">
-                      <Image src="/images/Logos/logo.jpg" alt="Logo" width={200} height={200} />
+                    <Link href="/" className="rounded-lg">
+                      <Image src="/images/Logos/logo.jpg" alt="Logo" width={200} height={200} className='rounded-lg' />
                     </Link>
 
 
