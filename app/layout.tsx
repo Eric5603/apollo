@@ -3,7 +3,7 @@ import './globals.css'
 import Head from "next/head";
 import FooterSection from "./components/FooterSection";
 import HeaderSection from "./components/HeaderSection";
-import BotpressChat from "./components/BotpressChat";
+import WhatsAppButton from "./components/WhatsAppButton";
       
 interface LayoutProps {
   children: ReactNode;
@@ -23,8 +23,8 @@ const Layout = ({ children }: LayoutProps) => {
       </Head>
       <body>
         <HeaderSection />
-        <main>{children}</main>
-        <BotpressChat />  
+        <main>{children}</main>  
+        <WhatsAppButton />
         <FooterSection />
       </body>
     </html>
