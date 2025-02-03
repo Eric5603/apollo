@@ -204,7 +204,7 @@ export default function GetAQuote() {
             <p className="text-gray-600 text-lg">{modal.message}</p>
             <button
               onClick={() => setModal(null)}
-              className="w-full mt-4 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-xl transition-colors font-medium"
+              className="w-full mt-6 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-xl transition-colors font-medium"
             >
               Close
             </button>
