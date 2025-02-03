@@ -1,5 +1,6 @@
 // app/about/page.tsx
 import { ReactElement } from 'react';
+import Image from 'next/image';
 
 const AboutPage = (): ReactElement => {
   return (
@@ -68,7 +69,7 @@ const AboutPage = (): ReactElement => {
                 </div>
               </div>
               <div className="aspect-square bg-slate-200 rounded-md overflow-hidden border-2 border-slate-200">
-                <img
+                <Image
                   src="/images/Logos/People.jpg"
                   alt="Construction team"
                   className="w-full h-full object-cover hover:scale-105 transition-transform"

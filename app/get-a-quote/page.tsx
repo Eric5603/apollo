@@ -62,7 +62,7 @@ export default function GetAQuote() {
             <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
               Start Your Project
             </h1>
-            <p className="mt-3 text-gray-600 text-lg">Let's create something extraordinary together</p>
+            <p className="mt-3 text-gray-600 text-lg">Let&apos;s create something extraordinary together</p>
           </div>
 
           {/* Name & Phone Grid */}
@@ -204,7 +204,7 @@ export default function GetAQuote() {
             <p className="text-gray-600 text-lg">{modal.message}</p>
             <button
               onClick={() => setModal(null)}
-              className="w-full mt-6 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-xl transition-colors font-medium"
+              className="w-full mt-4 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-xl transition-colors font-medium"
             >
               Close
             </button>
