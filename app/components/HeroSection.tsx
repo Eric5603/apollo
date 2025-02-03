@@ -121,7 +121,7 @@ export default function ModernConstructionHero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative h-[600px] rounded-lg overflow-hidden border-2 border-gray-200 shadow-lg"
+            className="relative h-[600px] rounded-lg overflow-hidden border-2 border-gray-300 shadow-lg"
             style={{ scale }}
           >
             {/* Video Container */}
